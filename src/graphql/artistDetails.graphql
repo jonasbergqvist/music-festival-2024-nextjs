@@ -1,0 +1,24 @@
+query ArtistDetails(
+  $locale: Locales = ALL,
+  $artistName: String!
+) {
+  Artist(
+    locale: [$locale]
+    limit: 1
+    where: {
+      Artist_Name: {
+        eq: $artistName
+      }
+    }
+  ) {
+    total
+    items {
+      Artist_Name
+      Genre
+      Teaser_Text
+      Description
+      Biggest_Hits
+      City_Name
+    }
+  }
+}

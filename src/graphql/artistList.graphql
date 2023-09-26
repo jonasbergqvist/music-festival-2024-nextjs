@@ -1,0 +1,47 @@
+query ArtistList(
+  $locale: Locales = ALL,
+  $searchPhrase: String,
+  $ranking: Ranking = RELEVANCE,
+  $genres: [String!] = [],
+  $cities: [String!] = []
+) {
+  Artist(
+    locale: [$locale]
+    where: {
+      _or: [
+      {
+      	_fulltext: {
+        	match: $searchPhrase
+      	}
+      },
+      {
+        Genre: {
+          boost: 5
+          match: $searchPhrase
+        }
+      }
+      ]
+    }
+    orderBy: {
+      _ranking: $ranking
+    }
+  ) {
+    total
+    items {
+      Artist_Name
+      Genre
+      Teaser_Text
+      Biggest_Hits
+    }
+    facets {
+      Genre(filters: $genres) {
+        name
+        count
+      }
+      City_Name(filters: $cities) {
+        name
+        count
+      }
+    }
+  }
+}

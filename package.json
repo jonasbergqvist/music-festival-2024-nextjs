@@ -1,0 +1,34 @@
+{
+  "name": "music-festival-2024-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "generate": "graphql-codegen",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.4",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.0.0",
+    "@graphql-codegen/typescript-react-query": "^5.0.0",
+    "graphql": "^16.8.1",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "graphql-codegen-apollo-next-ssr": "^1.7.4",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "^5.2.2"
+  }
+}
