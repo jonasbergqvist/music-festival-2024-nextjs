@@ -21,11 +21,6 @@ yarn install
 # Start application
 yarn dev
 
-# GraphQL
-Add / Update / Delete GraphQL files under src/graphql folder
-
-You can use GraphiQL when wirting queries to get intellisense, and then copy/paste the queries into the src/graphql folder. Use the url https://cg.optimizely.com/app/graphiql?auth=thqghUxNlZKQ1gOaiWXP2WNoRylaFekGuJ3niZcEhDoztTJs
-
 ## Add GraphQL file
 1. Add a new file with extension .graphql under src/graphql
 2. Run "yarn generate" to update "generated.ts" with types from query
