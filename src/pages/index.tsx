@@ -1,9 +1,17 @@
+import LandingContent from "@/components/LandingContent";
+import ContentArea from "@/components/ContentArea";
+import { ContentAreaItemModel, LandingPage, Maybe, useLandingQuery } from "@/generated";
 
 export default function Home() {
 
+  const { data } = useLandingQuery({ variables: {
+
+  }});
+  
   return (
-    <main className="overflow-hidden bg-sky-500/50 dark:bg-gray-800 rounded-2xl">
-      Check for site definition and use default language. Use /en in case of no site definition
-    </main>
+    <>
+      <LandingContent contentItem={data?.LandingPage?.items[0] as LandingPage } />
+      <ContentArea contentItems={ data?.LandingPage?.items[0]?.MainContentArea as Array<Maybe<ContentAreaItemModel>> } />
+    </>
   );
 }

@@ -41,6 +41,706 @@ export type Artist_LinkArgs = {
   type?: InputMaybe<LinkTypes>;
 };
 
+export type ArtistContainerPage = IContent & {
+  __typename?: 'ArtistContainerPage';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type ArtistContainerPage_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ArtistContainerPageAutocomplete = {
+  __typename?: 'ArtistContainerPageAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ArtistContainerPageAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistContainerPageAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistContainerPageAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistContainerPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistContainerPageAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistContainerPageAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistContainerPageAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ArtistContainerPageFacet = {
+  __typename?: 'ArtistContainerPageFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ArtistContainerPageFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistContainerPageFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistContainerPageFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistContainerPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistContainerPageFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistContainerPageFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistContainerPageFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ArtistContainerPageOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type ArtistContainerPageOutput = {
+  __typename?: 'ArtistContainerPageOutput';
+  autocomplete?: Maybe<ArtistContainerPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ArtistContainerPageFacet>;
+  items?: Maybe<Array<Maybe<ArtistContainerPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ArtistContainerPageOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ArtistContainerPageWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<ArtistContainerPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ArtistContainerPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ArtistContainerPageWhereInput>>>;
+};
+
+export type ArtistDetailsPage = IContent & {
+  __typename?: 'ArtistDetailsPage';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** Description to appear on the artist detail page. */
+  ArtistDescription?: Maybe<Scalars['String']['output']>;
+  ArtistGenre?: Maybe<Scalars['String']['output']>;
+  ArtistIsHeadliner?: Maybe<Scalars['Bool']['output']>;
+  ArtistName?: Maybe<Scalars['String']['output']>;
+  ArtistPhoto?: Maybe<Scalars['String']['output']>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  PerformanceEndTime?: Maybe<Scalars['Date']['output']>;
+  PerformanceStartTime?: Maybe<Scalars['Date']['output']>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StageName?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type ArtistDetailsPage_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ArtistDetailsPageAutocomplete = {
+  __typename?: 'ArtistDetailsPageAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ArtistDescription?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ArtistGenre?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ArtistName?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ArtistPhoto?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  StageName?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ArtistDetailsPageAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteArtistDescriptionArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteArtistGenreArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteArtistNameArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteArtistPhotoArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteStageNameArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ArtistDetailsPageAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ArtistDetailsPageFacet = {
+  __typename?: 'ArtistDetailsPageFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  ArtistDescription?: Maybe<Array<Maybe<StringFacet>>>;
+  ArtistGenre?: Maybe<Array<Maybe<StringFacet>>>;
+  ArtistIsHeadliner?: Maybe<Array<Maybe<StringFacet>>>;
+  ArtistName?: Maybe<Array<Maybe<StringFacet>>>;
+  ArtistPhoto?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  PerformanceEndTime?: Maybe<Array<Maybe<DateFacet>>>;
+  PerformanceStartTime?: Maybe<Array<Maybe<DateFacet>>>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StageName?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ArtistDetailsPageFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetArtistDescriptionArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetArtistGenreArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetArtistIsHeadlinerArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetArtistNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetArtistPhotoArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetPerformanceEndTimeArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetPerformanceStartTimeArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetStageNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ArtistDetailsPageFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ArtistDetailsPageFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ArtistDetailsPageOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  ArtistDescription?: InputMaybe<OrderBy>;
+  ArtistGenre?: InputMaybe<OrderBy>;
+  ArtistIsHeadliner?: InputMaybe<OrderBy>;
+  ArtistName?: InputMaybe<OrderBy>;
+  ArtistPhoto?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  PerformanceEndTime?: InputMaybe<OrderBy>;
+  PerformanceStartTime?: InputMaybe<OrderBy>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StageName?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type ArtistDetailsPageOutput = {
+  __typename?: 'ArtistDetailsPageOutput';
+  autocomplete?: Maybe<ArtistDetailsPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ArtistDetailsPageFacet>;
+  items?: Maybe<Array<Maybe<ArtistDetailsPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ArtistDetailsPageOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ArtistDetailsPageWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  ArtistDescription?: InputMaybe<StringFilterInput>;
+  ArtistGenre?: InputMaybe<StringFilterInput>;
+  ArtistIsHeadliner?: InputMaybe<BoolFilterInput>;
+  ArtistName?: InputMaybe<StringFilterInput>;
+  ArtistPhoto?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  PerformanceEndTime?: InputMaybe<DateFilterInput>;
+  PerformanceStartTime?: InputMaybe<DateFilterInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StageName?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<ArtistDetailsPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ArtistDetailsPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ArtistDetailsPageWhereInput>>>;
+};
+
 export type ArtistFacet = {
   __typename?: 'ArtistFacet';
   Artist_Name?: Maybe<Array<Maybe<StringFacet>>>;
@@ -144,6 +844,62 @@ export type ArtistWhereInput = {
   _or?: InputMaybe<Array<InputMaybe<ArtistWhereInput>>>;
 };
 
+export type BlobModel = {
+  __typename?: 'BlobModel';
+  Id?: Maybe<Scalars['String']['output']>;
+  Url?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlobModelAutocomplete = {
+  __typename?: 'BlobModelAutocomplete';
+  Id?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type BlobModelAutocompleteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BlobModelAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type BlobModelFacet = {
+  __typename?: 'BlobModelFacet';
+  Id?: Maybe<Array<Maybe<StringFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type BlobModelFacetIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BlobModelFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type BlobModelOrderByInput = {
+  Id?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+};
+
+export type BlobModelWhereInput = {
+  Id?: InputMaybe<StringFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+};
+
 export type BoolFilterInput = {
   /** `boost` influences the weight of a field by boosting a match with a number (default: 1) — counts more towards the eventual relevance score which can be projected with `_score` — at query time. Note that `boost` cannot be a negative number. */
   boost?: InputMaybe<Scalars['Int']['input']>;
@@ -153,6 +909,330 @@ export type BoolFilterInput = {
   exist?: InputMaybe<Scalars['Boolean']['input']>;
   /** `not_eq` retrieves results not matching with an exact (but case-insensitive) value. */
   notEq?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type BuyTicketBlock = IContent & {
+  __typename?: 'BuyTicketBlock';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  Heading?: Maybe<Scalars['String']['output']>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  Message?: Maybe<Scalars['String']['output']>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type BuyTicketBlock_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type BuyTicketBlockAutocomplete = {
+  __typename?: 'BuyTicketBlockAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  Heading?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  Message?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type BuyTicketBlockAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteHeadingArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteMessageArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type BuyTicketBlockAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type BuyTicketBlockFacet = {
+  __typename?: 'BuyTicketBlockFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  Heading?: Maybe<Array<Maybe<StringFacet>>>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  Message?: Maybe<Array<Maybe<StringFacet>>>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type BuyTicketBlockFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type BuyTicketBlockFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type BuyTicketBlockFacetHeadingArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetMessageArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type BuyTicketBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type BuyTicketBlockFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BuyTicketBlockFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type BuyTicketBlockFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type BuyTicketBlockOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Heading?: InputMaybe<OrderBy>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Message?: InputMaybe<OrderBy>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type BuyTicketBlockOutput = {
+  __typename?: 'BuyTicketBlockOutput';
+  autocomplete?: Maybe<BuyTicketBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<BuyTicketBlockFacet>;
+  items?: Maybe<Array<Maybe<BuyTicketBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type BuyTicketBlockOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type BuyTicketBlockWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  Heading?: InputMaybe<StringFilterInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  Message?: InputMaybe<StringFilterInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<BuyTicketBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<BuyTicketBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<BuyTicketBlockWhereInput>>>;
 };
 
 export type CategoryModel = {
@@ -334,6 +1414,72 @@ export type Content_LinkArgs = {
   type?: InputMaybe<LinkTypes>;
 };
 
+export type ContentAreaItemModel = {
+  __typename?: 'ContentAreaItemModel';
+  ContentLink?: Maybe<ContentModelReference>;
+  DisplayOption?: Maybe<Scalars['String']['output']>;
+  InlineBlock?: Maybe<InlineBlockPropertyModel>;
+  Tag?: Maybe<Scalars['String']['output']>;
+};
+
+export type ContentAreaItemModelAutocomplete = {
+  __typename?: 'ContentAreaItemModelAutocomplete';
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  DisplayOption?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  InlineBlock?: Maybe<InlineBlockPropertyModelAutocomplete>;
+  Tag?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ContentAreaItemModelAutocompleteDisplayOptionArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentAreaItemModelAutocompleteTagArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ContentAreaItemModelFacet = {
+  __typename?: 'ContentAreaItemModelFacet';
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  DisplayOption?: Maybe<Array<Maybe<StringFacet>>>;
+  InlineBlock?: Maybe<InlineBlockPropertyModelFacet>;
+  Tag?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ContentAreaItemModelFacetDisplayOptionArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentAreaItemModelFacetTagArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ContentAreaItemModelOrderByInput = {
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  DisplayOption?: InputMaybe<OrderBy>;
+  InlineBlock?: InputMaybe<InlineBlockPropertyModelOrderByInput>;
+  Tag?: InputMaybe<OrderBy>;
+};
+
+export type ContentAreaItemModelWhereInput = {
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  DisplayOption?: InputMaybe<StringFilterInput>;
+  InlineBlock?: InputMaybe<InlineBlockPropertyModelWhereInput>;
+  Tag?: InputMaybe<StringFilterInput>;
+};
+
 export type ContentAutocomplete = {
   __typename?: 'ContentAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
@@ -390,6 +1536,368 @@ export type ContentAutocompleteStatusArgs = {
 export type ContentAutocompleteUrlArgs = {
   limit?: Scalars['Int']['input'];
   value: Scalars['String']['input'];
+};
+
+export type ContentBlock = IContent & {
+  __typename?: 'ContentBlock';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  Content?: Maybe<Scalars['String']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  Image?: Maybe<Scalars['String']['output']>;
+  ImageAlignment?: Maybe<Scalars['String']['output']>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Title?: Maybe<Scalars['String']['output']>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type ContentBlock_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ContentBlockAutocomplete = {
+  __typename?: 'ContentBlockAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  Content?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  Image?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ImageAlignment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Title?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ContentBlockAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteContentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteImageArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteImageAlignmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteTitleArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ContentBlockAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ContentBlockFacet = {
+  __typename?: 'ContentBlockFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  Content?: Maybe<Array<Maybe<StringFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  Image?: Maybe<Array<Maybe<StringFacet>>>;
+  ImageAlignment?: Maybe<Array<Maybe<StringFacet>>>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Title?: Maybe<Array<Maybe<StringFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ContentBlockFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ContentBlockFacetContentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ContentBlockFacetImageArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetImageAlignmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ContentBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ContentBlockFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ContentBlockFacetTitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentBlockFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ContentBlockOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  Content?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Image?: InputMaybe<OrderBy>;
+  ImageAlignment?: InputMaybe<OrderBy>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Title?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type ContentBlockOutput = {
+  __typename?: 'ContentBlockOutput';
+  autocomplete?: Maybe<ContentBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ContentBlockFacet>;
+  items?: Maybe<Array<Maybe<ContentBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ContentBlockOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ContentBlockWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  Content?: InputMaybe<StringFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  Image?: InputMaybe<StringFilterInput>;
+  ImageAlignment?: InputMaybe<StringFilterInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Title?: InputMaybe<StringFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<ContentBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ContentBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ContentBlockWhereInput>>>;
 };
 
 export type ContentFacet = {
@@ -929,6 +2437,699 @@ export type IContent_LinkArgs = {
   type?: InputMaybe<LinkTypes>;
 };
 
+export type ImageFile = IContent & {
+  __typename?: 'ImageFile';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  Content?: Maybe<Scalars['String']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  MimeType?: Maybe<Scalars['String']['output']>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Thumbnail?: Maybe<BlobModel>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type ImageFile_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ImageFileAutocomplete = {
+  __typename?: 'ImageFileAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  MimeType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Thumbnail?: Maybe<BlobModelAutocomplete>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ImageFileAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteMimeTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImageFileAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ImageFileFacet = {
+  __typename?: 'ImageFileFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  Content?: Maybe<Array<Maybe<StringFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MimeType?: Maybe<Array<Maybe<StringFacet>>>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Thumbnail?: Maybe<BlobModelFacet>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ImageFileFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImageFileFacetContentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImageFileFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetMimeTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImageFileFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImageFileFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImageFileFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImageFileFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ImageFileOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  Content?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MimeType?: InputMaybe<OrderBy>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Thumbnail?: InputMaybe<BlobModelOrderByInput>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type ImageFileOutput = {
+  __typename?: 'ImageFileOutput';
+  autocomplete?: Maybe<ImageFileAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ImageFileFacet>;
+  items?: Maybe<Array<Maybe<ImageFile>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ImageFileOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ImageFileWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  Content?: InputMaybe<SearchableStringFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MimeType?: InputMaybe<StringFilterInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Thumbnail?: InputMaybe<BlobModelWhereInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<ImageFileWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ImageFileWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ImageFileWhereInput>>>;
+};
+
+export type ImagePage = IContent & {
+  __typename?: 'ImagePage';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  Content?: Maybe<Scalars['String']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Copyright?: Maybe<Scalars['String']['output']>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  MimeType?: Maybe<Scalars['String']['output']>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Thumbnail?: Maybe<BlobModel>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type ImagePage_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ImagePageAutocomplete = {
+  __typename?: 'ImagePageAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  MimeType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Thumbnail?: Maybe<BlobModelAutocomplete>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ImagePageAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteMimeTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type ImagePageAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ImagePageFacet = {
+  __typename?: 'ImagePageFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  Content?: Maybe<Array<Maybe<StringFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Copyright?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MimeType?: Maybe<Array<Maybe<StringFacet>>>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Thumbnail?: Maybe<BlobModelFacet>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ImagePageFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImagePageFacetContentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetCopyrightArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImagePageFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetMimeTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImagePageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImagePageFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ImagePageFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type ImagePageFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ImagePageOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  Content?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Copyright?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MimeType?: InputMaybe<OrderBy>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Thumbnail?: InputMaybe<BlobModelOrderByInput>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type ImagePageOutput = {
+  __typename?: 'ImagePageOutput';
+  autocomplete?: Maybe<ImagePageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ImagePageFacet>;
+  items?: Maybe<Array<Maybe<ImagePage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ImagePageOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ImagePageWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  Content?: InputMaybe<SearchableStringFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Copyright?: InputMaybe<SearchableStringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MimeType?: InputMaybe<StringFilterInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Thumbnail?: InputMaybe<BlobModelWhereInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<ImagePageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ImagePageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ImagePageWhereInput>>>;
+};
+
+export type InlineBlockPropertyModel = {
+  __typename?: 'InlineBlockPropertyModel';
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type InlineBlockPropertyModelAutocomplete = {
+  __typename?: 'InlineBlockPropertyModelAutocomplete';
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type InlineBlockPropertyModelAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type InlineBlockPropertyModelFacet = {
+  __typename?: 'InlineBlockPropertyModelFacet';
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type InlineBlockPropertyModelFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type InlineBlockPropertyModelOrderByInput = {
+  ContentType?: InputMaybe<OrderBy>;
+};
+
+export type InlineBlockPropertyModelWhereInput = {
+  ContentType?: InputMaybe<StringFilterInput>;
+};
+
 export type IntFilterInput = {
   /** `boost` influences the weight of a field by boosting a match with a number (default: 1) — counts more towards the eventual relevance score which can be projected with `_score` — at query time. Note that `boost` cannot be a negative number. */
   boost?: InputMaybe<Scalars['Int']['input']>;
@@ -952,6 +3153,425 @@ export type IntFilterInput = {
   notIn?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
 };
 
+export type LandingPage = IContent & {
+  __typename?: 'LandingPage';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ArtistsLink?: Maybe<ContentModelReference>;
+  BuyTicketBlock?: Maybe<LandingPageBlockData>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']['output']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Created?: Maybe<Scalars['Date']['output']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  FooterContentArea?: Maybe<Array<Maybe<ContentAreaItemModel>>>;
+  HeroImage?: Maybe<Scalars['String']['output']>;
+  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MainContentArea?: Maybe<Array<Maybe<ContentAreaItemModel>>>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  Name?: Maybe<Scalars['String']['output']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']['output']>;
+  RouteSegment?: Maybe<Scalars['String']['output']>;
+  Saved?: Maybe<Scalars['Date']['output']>;
+  SiteId?: Maybe<Scalars['String']['output']>;
+  StartPublish?: Maybe<Scalars['Date']['output']>;
+  Status?: Maybe<Scalars['String']['output']>;
+  StopPublish?: Maybe<Scalars['Date']['output']>;
+  Subtitle?: Maybe<Scalars['String']['output']>;
+  Title?: Maybe<Scalars['String']['output']>;
+  Url?: Maybe<Scalars['String']['output']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _link?: Maybe<QueryRef>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+};
+
+
+export type LandingPage_LinkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type LandingPageAutocomplete = {
+  __typename?: 'LandingPageAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ArtistsLink?: Maybe<ContentModelReferenceAutocomplete>;
+  BuyTicketBlock?: Maybe<LandingPageBlockDataAutocomplete>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  FooterContentArea?: Maybe<ContentAreaItemModelAutocomplete>;
+  HeroImage?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MainContentArea?: Maybe<ContentAreaItemModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Subtitle?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Title?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type LandingPageAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteHeroImageArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteStatusArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteSubtitleArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteTitleArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageAutocompleteUrlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type LandingPageBlockData = {
+  __typename?: 'LandingPageBlockData';
+  Heading?: Maybe<Scalars['String']['output']>;
+  Message?: Maybe<Scalars['String']['output']>;
+};
+
+export type LandingPageBlockDataAutocomplete = {
+  __typename?: 'LandingPageBlockDataAutocomplete';
+  Heading?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  Message?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type LandingPageBlockDataAutocompleteHeadingArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LandingPageBlockDataAutocompleteMessageArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type LandingPageBlockDataFacet = {
+  __typename?: 'LandingPageBlockDataFacet';
+  Heading?: Maybe<Array<Maybe<StringFacet>>>;
+  Message?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type LandingPageBlockDataFacetHeadingArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageBlockDataFacetMessageArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type LandingPageBlockDataOrderByInput = {
+  Heading?: InputMaybe<OrderBy>;
+  Message?: InputMaybe<OrderBy>;
+};
+
+export type LandingPageBlockDataWhereInput = {
+  Heading?: InputMaybe<StringFilterInput>;
+  Message?: InputMaybe<StringFilterInput>;
+};
+
+export type LandingPageFacet = {
+  __typename?: 'LandingPageFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  ArtistsLink?: Maybe<ContentModelReferenceFacet>;
+  BuyTicketBlock?: Maybe<LandingPageBlockDataFacet>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  FooterContentArea?: Maybe<ContentAreaItemModelFacet>;
+  HeroImage?: Maybe<Array<Maybe<StringFacet>>>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MainContentArea?: Maybe<ContentAreaItemModelFacet>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Subtitle?: Maybe<Array<Maybe<StringFacet>>>;
+  Title?: Maybe<Array<Maybe<StringFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type LandingPageFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type LandingPageFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type LandingPageFacetHeroImageArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type LandingPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type LandingPageFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type LandingPageFacetSubtitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetTitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LandingPageFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type LandingPageOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  ArtistsLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  BuyTicketBlock?: InputMaybe<LandingPageBlockDataOrderByInput>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  FooterContentArea?: InputMaybe<ContentAreaItemModelOrderByInput>;
+  HeroImage?: InputMaybe<OrderBy>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MainContentArea?: InputMaybe<ContentAreaItemModelOrderByInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Subtitle?: InputMaybe<OrderBy>;
+  Title?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type LandingPageOutput = {
+  __typename?: 'LandingPageOutput';
+  autocomplete?: Maybe<LandingPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<LandingPageFacet>;
+  items?: Maybe<Array<Maybe<LandingPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type LandingPageOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type LandingPageWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  ArtistsLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  BuyTicketBlock?: InputMaybe<LandingPageBlockDataWhereInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  FooterContentArea?: InputMaybe<ContentAreaItemModelWhereInput>;
+  HeroImage?: InputMaybe<StringFilterInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MainContentArea?: InputMaybe<ContentAreaItemModelWhereInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Subtitle?: InputMaybe<StringFilterInput>;
+  Title?: InputMaybe<StringFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<LandingPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<LandingPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<LandingPageWhereInput>>>;
+};
+
 export enum LinkTypes {
   Default = 'DEFAULT'
 }
@@ -959,7 +3579,8 @@ export enum LinkTypes {
 export enum Locales {
   All = 'ALL',
   Neutral = 'NEUTRAL',
-  En = 'en'
+  En = 'en',
+  Sv = 'sv'
 }
 
 export type NumberFacet = {
@@ -981,10 +3602,16 @@ export enum OrderByFacetType {
 export type Query = {
   __typename?: 'Query';
   Artist?: Maybe<ArtistOutput>;
+  ArtistContainerPage?: Maybe<ArtistContainerPageOutput>;
+  ArtistDetailsPage?: Maybe<ArtistDetailsPageOutput>;
+  BuyTicketBlock?: Maybe<BuyTicketBlockOutput>;
   City?: Maybe<CityOutput>;
   Content?: Maybe<ContentOutput>;
+  ContentBlock?: Maybe<ContentBlockOutput>;
+  ImageFile?: Maybe<ImageFileOutput>;
+  ImagePage?: Maybe<ImagePageOutput>;
+  LandingPage?: Maybe<LandingPageOutput>;
   SiteDefinition?: Maybe<SiteDefinitionOutput>;
-  StartPage?: Maybe<StartPageOutput>;
 };
 
 
@@ -992,10 +3619,43 @@ export type QueryArtistArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  locale?: InputMaybe<Array<InputMaybe<Band_Locales>>>;
   orderBy?: InputMaybe<ArtistOrderByInput>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<ArtistWhereInput>;
+};
+
+
+export type QueryArtistContainerPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ArtistContainerPageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ArtistContainerPageWhereInput>;
+};
+
+
+export type QueryArtistDetailsPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ArtistDetailsPageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ArtistDetailsPageWhereInput>;
+};
+
+
+export type QueryBuyTicketBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<BuyTicketBlockOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<BuyTicketBlockWhereInput>;
 };
 
 
@@ -1003,7 +3663,7 @@ export type QueryCityArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  locale?: InputMaybe<Array<InputMaybe<City_Locales>>>;
   orderBy?: InputMaybe<CityOrderByInput>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<CityWhereInput>;
@@ -1021,6 +3681,50 @@ export type QueryContentArgs = {
 };
 
 
+export type QueryContentBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ContentBlockOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ContentBlockWhereInput>;
+};
+
+
+export type QueryImageFileArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ImageFileOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ImageFileWhereInput>;
+};
+
+
+export type QueryImagePageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ImagePageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ImagePageWhereInput>;
+};
+
+
+export type QueryLandingPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<LandingPageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<LandingPageWhereInput>;
+};
+
+
 export type QuerySiteDefinitionArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -1031,24 +3735,19 @@ export type QuerySiteDefinitionArgs = {
   where?: InputMaybe<SiteDefinitionWhereInput>;
 };
 
-
-export type QueryStartPageArgs = {
-  cursor?: InputMaybe<Scalars['String']['input']>;
-  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
-  orderBy?: InputMaybe<StartPageOrderByInput>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<StartPageWhereInput>;
-};
-
 export type QueryRef = {
   __typename?: 'QueryRef';
   Artist?: Maybe<ArtistOutput>;
+  ArtistContainerPage?: Maybe<ArtistContainerPageOutput>;
+  ArtistDetailsPage?: Maybe<ArtistDetailsPageOutput>;
+  BuyTicketBlock?: Maybe<BuyTicketBlockOutput>;
   City?: Maybe<CityOutput>;
   Content?: Maybe<ContentOutput>;
+  ContentBlock?: Maybe<ContentBlockOutput>;
+  ImageFile?: Maybe<ImageFileOutput>;
+  ImagePage?: Maybe<ImagePageOutput>;
+  LandingPage?: Maybe<LandingPageOutput>;
   SiteDefinition?: Maybe<SiteDefinitionOutput>;
-  StartPage?: Maybe<StartPageOutput>;
 };
 
 
@@ -1056,10 +3755,43 @@ export type QueryRefArtistArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  locale?: InputMaybe<Array<InputMaybe<Band_Locales>>>;
   orderBy?: InputMaybe<ArtistOrderByInput>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<ArtistWhereInput>;
+};
+
+
+export type QueryRefArtistContainerPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ArtistContainerPageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ArtistContainerPageWhereInput>;
+};
+
+
+export type QueryRefArtistDetailsPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ArtistDetailsPageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ArtistDetailsPageWhereInput>;
+};
+
+
+export type QueryRefBuyTicketBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<BuyTicketBlockOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<BuyTicketBlockWhereInput>;
 };
 
 
@@ -1067,7 +3799,7 @@ export type QueryRefCityArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  locale?: InputMaybe<Array<InputMaybe<City_Locales>>>;
   orderBy?: InputMaybe<CityOrderByInput>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<CityWhereInput>;
@@ -1085,6 +3817,50 @@ export type QueryRefContentArgs = {
 };
 
 
+export type QueryRefContentBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ContentBlockOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ContentBlockWhereInput>;
+};
+
+
+export type QueryRefImageFileArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ImageFileOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ImageFileWhereInput>;
+};
+
+
+export type QueryRefImagePageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ImagePageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ImagePageWhereInput>;
+};
+
+
+export type QueryRefLandingPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<LandingPageOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<LandingPageWhereInput>;
+};
+
+
 export type QueryRefSiteDefinitionArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -1093,17 +3869,6 @@ export type QueryRefSiteDefinitionArgs = {
   orderBy?: InputMaybe<SiteDefinitionOrderByInput>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<SiteDefinitionWhereInput>;
-};
-
-
-export type QueryRefStartPageArgs = {
-  cursor?: InputMaybe<Scalars['String']['input']>;
-  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
-  orderBy?: InputMaybe<StartPageOrderByInput>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<StartPageWhereInput>;
 };
 
 export type RangeFacetsInput = {
@@ -1408,304 +4173,6 @@ export type SiteDefinitionWhereInput = {
   _or?: InputMaybe<Array<InputMaybe<SiteDefinitionWhereInput>>>;
 };
 
-export type StartPage = IContent & {
-  __typename?: 'StartPage';
-  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  Category?: Maybe<Array<Maybe<CategoryModel>>>;
-  Changed?: Maybe<Scalars['Date']['output']>;
-  ContentLink?: Maybe<ContentModelReference>;
-  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  Created?: Maybe<Scalars['Date']['output']>;
-  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
-  IntroductionText?: Maybe<Scalars['String']['output']>;
-  IsCommonDraft?: Maybe<Scalars['Bool']['output']>;
-  Language?: Maybe<ContentLanguageModel>;
-  MasterLanguage?: Maybe<ContentLanguageModel>;
-  Name?: Maybe<Scalars['String']['output']>;
-  ParentLink?: Maybe<ContentModelReference>;
-  RelativePath?: Maybe<Scalars['String']['output']>;
-  RouteSegment?: Maybe<Scalars['String']['output']>;
-  Saved?: Maybe<Scalars['Date']['output']>;
-  SiteId?: Maybe<Scalars['String']['output']>;
-  StartPublish?: Maybe<Scalars['Date']['output']>;
-  Status?: Maybe<Scalars['String']['output']>;
-  StopPublish?: Maybe<Scalars['Date']['output']>;
-  Url?: Maybe<Scalars['String']['output']>;
-  _children?: Maybe<QueryRef>;
-  _deleted?: Maybe<Scalars['Bool']['output']>;
-  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  _link?: Maybe<QueryRef>;
-  _modified?: Maybe<Scalars['Date']['output']>;
-  _score?: Maybe<Scalars['Float']['output']>;
-};
-
-
-export type StartPage_LinkArgs = {
-  type?: InputMaybe<LinkTypes>;
-};
-
-export type StartPageAutocomplete = {
-  __typename?: 'StartPageAutocomplete';
-  Ancestors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  Category?: Maybe<CategoryModelAutocomplete>;
-  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
-  ContentType?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
-  Language?: Maybe<ContentLanguageModelAutocomplete>;
-  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
-  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
-  RelativePath?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  RouteSegment?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  SiteId?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  Status?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  Url?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-};
-
-
-export type StartPageAutocompleteAncestorsArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-
-export type StartPageAutocompleteContentTypeArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-
-export type StartPageAutocompleteRelativePathArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-
-export type StartPageAutocompleteRouteSegmentArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-
-export type StartPageAutocompleteSiteIdArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-
-export type StartPageAutocompleteStatusArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-
-export type StartPageAutocompleteUrlArgs = {
-  limit?: Scalars['Int']['input'];
-  value: Scalars['String']['input'];
-};
-
-export type StartPageFacet = {
-  __typename?: 'StartPageFacet';
-  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
-  Category?: Maybe<CategoryModelFacet>;
-  Changed?: Maybe<Array<Maybe<DateFacet>>>;
-  ContentLink?: Maybe<ContentModelReferenceFacet>;
-  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
-  Created?: Maybe<Array<Maybe<DateFacet>>>;
-  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
-  IntroductionText?: Maybe<Array<Maybe<StringFacet>>>;
-  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
-  Language?: Maybe<ContentLanguageModelFacet>;
-  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
-  Name?: Maybe<Array<Maybe<StringFacet>>>;
-  ParentLink?: Maybe<ContentModelReferenceFacet>;
-  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
-  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
-  Saved?: Maybe<Array<Maybe<DateFacet>>>;
-  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
-  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
-  Status?: Maybe<Array<Maybe<StringFacet>>>;
-  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
-  Url?: Maybe<Array<Maybe<StringFacet>>>;
-};
-
-
-export type StartPageFacetAncestorsArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetChangedArgs = {
-  unit?: InputMaybe<DateFacetUnit>;
-  value?: InputMaybe<Scalars['Int']['input']>;
-};
-
-
-export type StartPageFacetContentTypeArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetCreatedArgs = {
-  unit?: InputMaybe<DateFacetUnit>;
-  value?: InputMaybe<Scalars['Int']['input']>;
-};
-
-
-export type StartPageFacetIntroductionTextArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetIsCommonDraftArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetNameArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetRelativePathArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetRouteSegmentArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetSavedArgs = {
-  unit?: InputMaybe<DateFacetUnit>;
-  value?: InputMaybe<Scalars['Int']['input']>;
-};
-
-
-export type StartPageFacetSiteIdArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetStartPublishArgs = {
-  unit?: InputMaybe<DateFacetUnit>;
-  value?: InputMaybe<Scalars['Int']['input']>;
-};
-
-
-export type StartPageFacetStatusArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-
-export type StartPageFacetStopPublishArgs = {
-  unit?: InputMaybe<DateFacetUnit>;
-  value?: InputMaybe<Scalars['Int']['input']>;
-};
-
-
-export type StartPageFacetUrlArgs = {
-  filters?: InputMaybe<Array<Scalars['String']['input']>>;
-  limit?: Scalars['Int']['input'];
-  orderBy?: InputMaybe<OrderBy>;
-  orderType?: InputMaybe<OrderByFacetType>;
-};
-
-export type StartPageOrderByInput = {
-  Ancestors?: InputMaybe<OrderBy>;
-  Category?: InputMaybe<CategoryModelOrderByInput>;
-  Changed?: InputMaybe<OrderBy>;
-  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
-  ContentType?: InputMaybe<OrderBy>;
-  Created?: InputMaybe<OrderBy>;
-  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
-  IntroductionText?: InputMaybe<OrderBy>;
-  IsCommonDraft?: InputMaybe<OrderBy>;
-  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
-  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
-  Name?: InputMaybe<OrderBy>;
-  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
-  RelativePath?: InputMaybe<OrderBy>;
-  RouteSegment?: InputMaybe<OrderBy>;
-  Saved?: InputMaybe<OrderBy>;
-  SiteId?: InputMaybe<OrderBy>;
-  StartPublish?: InputMaybe<OrderBy>;
-  Status?: InputMaybe<OrderBy>;
-  StopPublish?: InputMaybe<OrderBy>;
-  Url?: InputMaybe<OrderBy>;
-  _ranking?: InputMaybe<Ranking>;
-};
-
-export type StartPageOutput = {
-  __typename?: 'StartPageOutput';
-  autocomplete?: Maybe<StartPageAutocomplete>;
-  cursor?: Maybe<Scalars['String']['output']>;
-  facets?: Maybe<StartPageFacet>;
-  items?: Maybe<Array<Maybe<StartPage>>>;
-  total?: Maybe<Scalars['Int']['output']>;
-};
-
-
-export type StartPageOutputTotalArgs = {
-  all?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type StartPageWhereInput = {
-  Ancestors?: InputMaybe<StringFilterInput>;
-  Category?: InputMaybe<CategoryModelWhereInput>;
-  Changed?: InputMaybe<DateFilterInput>;
-  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
-  ContentType?: InputMaybe<StringFilterInput>;
-  Created?: InputMaybe<DateFilterInput>;
-  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
-  IntroductionText?: InputMaybe<SearchableStringFilterInput>;
-  IsCommonDraft?: InputMaybe<BoolFilterInput>;
-  Language?: InputMaybe<ContentLanguageModelWhereInput>;
-  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
-  Name?: InputMaybe<SearchableStringFilterInput>;
-  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
-  RelativePath?: InputMaybe<StringFilterInput>;
-  RouteSegment?: InputMaybe<StringFilterInput>;
-  Saved?: InputMaybe<DateFilterInput>;
-  SiteId?: InputMaybe<StringFilterInput>;
-  StartPublish?: InputMaybe<DateFilterInput>;
-  Status?: InputMaybe<StringFilterInput>;
-  StopPublish?: InputMaybe<DateFilterInput>;
-  Url?: InputMaybe<StringFilterInput>;
-  _and?: InputMaybe<Array<InputMaybe<StartPageWhereInput>>>;
-  _fulltext?: InputMaybe<SearchableStringFilterInput>;
-  _modified?: InputMaybe<DateFilterInput>;
-  _not?: InputMaybe<Array<InputMaybe<StartPageWhereInput>>>;
-  _or?: InputMaybe<Array<InputMaybe<StartPageWhereInput>>>;
-};
-
 export type StringFacet = {
   __typename?: 'StringFacet';
   count?: Maybe<Scalars['Int']['output']>;
@@ -1744,8 +4211,20 @@ export enum SynonymSlot {
   Two = 'TWO'
 }
 
+export enum Band_Locales {
+  All = 'ALL',
+  Neutral = 'NEUTRAL',
+  En = 'en'
+}
+
+export enum City_Locales {
+  All = 'ALL',
+  Neutral = 'NEUTRAL',
+  En = 'en'
+}
+
 export type ArtistDetailsQueryVariables = Exact<{
-  locale?: InputMaybe<Locales>;
+  locale?: InputMaybe<Band_Locales>;
   artistName: Scalars['String']['input'];
 }>;
 
@@ -1753,7 +4232,7 @@ export type ArtistDetailsQueryVariables = Exact<{
 export type ArtistDetailsQuery = { __typename?: 'Query', Artist?: { __typename?: 'ArtistOutput', total?: number | null, items?: Array<{ __typename?: 'Artist', Artist_Name?: string | null, Genre?: string | null, Teaser_Text?: string | null, Description?: string | null, Biggest_Hits?: Array<string | null> | null, City_Name?: string | null } | null> | null } | null };
 
 export type ArtistListQueryVariables = Exact<{
-  locale?: InputMaybe<Locales>;
+  locale?: InputMaybe<Band_Locales>;
   searchPhrase?: InputMaybe<Scalars['String']['input']>;
   ranking?: InputMaybe<Ranking>;
   genres?: InputMaybe<Array<Scalars['String']['input']> | Scalars['String']['input']>;
@@ -1763,9 +4242,74 @@ export type ArtistListQueryVariables = Exact<{
 
 export type ArtistListQuery = { __typename?: 'Query', Artist?: { __typename?: 'ArtistOutput', total?: number | null, items?: Array<{ __typename?: 'Artist', Artist_Name?: string | null, Genre?: string | null, Teaser_Text?: string | null, Biggest_Hits?: Array<string | null> | null } | null> | null, facets?: { __typename?: 'ArtistFacet', Genre?: Array<{ __typename?: 'StringFacet', name?: string | null, count?: number | null } | null> | null, City_Name?: Array<{ __typename?: 'StringFacet', name?: string | null, count?: number | null } | null> | null } | null } | null };
 
+export type ContentBlockFragment = { __typename?: 'ContentBlock', Title?: string | null, Image?: string | null, ImageAlignment?: string | null, Content?: string | null };
 
+export type ImageFileFragment = { __typename?: 'ImageFile', Content?: string | null, Url?: string | null, Thumbnail?: { __typename?: 'BlobModel', Url?: string | null } | null };
+
+type ItemsInContentArea_ArtistContainerPage_Fragment = { __typename: 'ArtistContainerPage' };
+
+type ItemsInContentArea_ArtistDetailsPage_Fragment = { __typename: 'ArtistDetailsPage' };
+
+type ItemsInContentArea_BuyTicketBlock_Fragment = { __typename: 'BuyTicketBlock' };
+
+type ItemsInContentArea_Content_Fragment = { __typename: 'Content' };
+
+type ItemsInContentArea_ContentBlock_Fragment = { __typename: 'ContentBlock', Title?: string | null, Image?: string | null, ImageAlignment?: string | null, Content?: string | null };
+
+type ItemsInContentArea_ImageFile_Fragment = { __typename: 'ImageFile', Content?: string | null, Url?: string | null, Thumbnail?: { __typename?: 'BlobModel', Url?: string | null } | null };
+
+type ItemsInContentArea_ImagePage_Fragment = { __typename: 'ImagePage' };
+
+type ItemsInContentArea_LandingPage_Fragment = { __typename: 'LandingPage' };
+
+export type ItemsInContentAreaFragment = ItemsInContentArea_ArtistContainerPage_Fragment | ItemsInContentArea_ArtistDetailsPage_Fragment | ItemsInContentArea_BuyTicketBlock_Fragment | ItemsInContentArea_Content_Fragment | ItemsInContentArea_ContentBlock_Fragment | ItemsInContentArea_ImageFile_Fragment | ItemsInContentArea_ImagePage_Fragment | ItemsInContentArea_LandingPage_Fragment;
+
+export type LandingPageBlockDataFragment = { __typename?: 'LandingPageBlockData', Heading?: string | null, Message?: string | null };
+
+export type LandingQueryVariables = Exact<{
+  locales?: InputMaybe<Locales>;
+}>;
+
+
+export type LandingQuery = { __typename?: 'Query', LandingPage?: { __typename?: 'LandingPageOutput', items?: Array<{ __typename?: 'LandingPage', Title?: string | null, Subtitle?: string | null, HeroImage?: string | null, BuyTicketBlock?: { __typename?: 'LandingPageBlockData', Heading?: string | null, Message?: string | null } | null, ArtistsLink?: { __typename?: 'ContentModelReference', Expanded?: { __typename?: 'ArtistContainerPage', Name?: string | null, RelativePath?: string | null } | { __typename?: 'ArtistDetailsPage', Name?: string | null, RelativePath?: string | null } | { __typename?: 'BuyTicketBlock', Name?: string | null, RelativePath?: string | null } | { __typename?: 'Content', Name?: string | null, RelativePath?: string | null } | { __typename?: 'ContentBlock', Name?: string | null, RelativePath?: string | null } | { __typename?: 'ImageFile', Name?: string | null, RelativePath?: string | null } | { __typename?: 'ImagePage', Name?: string | null, RelativePath?: string | null } | { __typename?: 'LandingPage', Name?: string | null, RelativePath?: string | null } | null } | null, MainContentArea?: Array<{ __typename?: 'ContentAreaItemModel', ContentLink?: { __typename?: 'ContentModelReference', Expanded?: { __typename: 'ArtistContainerPage' } | { __typename: 'ArtistDetailsPage' } | { __typename: 'BuyTicketBlock' } | { __typename: 'Content' } | { __typename: 'ContentBlock', Title?: string | null, Image?: string | null, ImageAlignment?: string | null, Content?: string | null } | { __typename: 'ImageFile', Content?: string | null, Url?: string | null, Thumbnail?: { __typename?: 'BlobModel', Url?: string | null } | null } | { __typename: 'ImagePage' } | { __typename: 'LandingPage' } | null } | null } | null> | null, FooterContentArea?: Array<{ __typename?: 'ContentAreaItemModel', ContentLink?: { __typename?: 'ContentModelReference', Expanded?: { __typename: 'ArtistContainerPage' } | { __typename: 'ArtistDetailsPage' } | { __typename: 'BuyTicketBlock' } | { __typename: 'Content' } | { __typename: 'ContentBlock', Title?: string | null, Image?: string | null, ImageAlignment?: string | null, Content?: string | null } | { __typename: 'ImageFile', Content?: string | null, Url?: string | null, Thumbnail?: { __typename?: 'BlobModel', Url?: string | null } | null } | { __typename: 'ImagePage' } | { __typename: 'LandingPage' } | null } | null } | null> | null } | null> | null } | null };
+
+export const ContentBlockFragmentDoc = gql`
+    fragment ContentBlock on ContentBlock {
+  Title
+  Image
+  ImageAlignment
+  Content
+}
+    `;
+export const ImageFileFragmentDoc = gql`
+    fragment ImageFile on ImageFile {
+  Thumbnail {
+    Url
+  }
+  Content
+  Url
+}
+    `;
+export const ItemsInContentAreaFragmentDoc = gql`
+    fragment ItemsInContentArea on IContent {
+  __typename
+  ... on ContentBlock {
+    ...ContentBlock
+  }
+  ... on ImageFile {
+    ...ImageFile
+  }
+}
+    ${ContentBlockFragmentDoc}
+${ImageFileFragmentDoc}`;
+export const LandingPageBlockDataFragmentDoc = gql`
+    fragment LandingPageBlockData on LandingPageBlockData {
+  Heading
+  Message
+}
+    `;
 export const ArtistDetailsDocument = gql`
-    query ArtistDetails($locale: Locales = ALL, $artistName: String!) {
+    query ArtistDetails($locale: band_Locales = ALL, $artistName: String!) {
   Artist(locale: [$locale], limit: 1, where: {Artist_Name: {eq: $artistName}}) {
     total
     items {
@@ -1809,7 +4353,7 @@ export type ArtistDetailsQueryHookResult = ReturnType<typeof useArtistDetailsQue
 export type ArtistDetailsLazyQueryHookResult = ReturnType<typeof useArtistDetailsLazyQuery>;
 export type ArtistDetailsQueryResult = Apollo.QueryResult<ArtistDetailsQuery, ArtistDetailsQueryVariables>;
 export const ArtistListDocument = gql`
-    query ArtistList($locale: Locales = ALL, $searchPhrase: String, $ranking: Ranking = RELEVANCE, $genres: [String!] = [], $cities: [String!] = []) {
+    query ArtistList($locale: band_Locales = ALL, $searchPhrase: String, $ranking: Ranking = RELEVANCE, $genres: [String!] = [], $cities: [String!] = []) {
   Artist(
     locale: [$locale]
     where: {_or: [{_fulltext: {match: $searchPhrase}}, {Genre: {boost: 5, match: $searchPhrase}}]}
@@ -1867,3 +4411,66 @@ export function useArtistListLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions
 export type ArtistListQueryHookResult = ReturnType<typeof useArtistListQuery>;
 export type ArtistListLazyQueryHookResult = ReturnType<typeof useArtistListLazyQuery>;
 export type ArtistListQueryResult = Apollo.QueryResult<ArtistListQuery, ArtistListQueryVariables>;
+export const LandingDocument = gql`
+    query Landing($locales: Locales = ALL) {
+  LandingPage(locale: [$locales], orderBy: {Saved: DESC}, limit: 1) {
+    items {
+      Title
+      Subtitle
+      BuyTicketBlock {
+        ...LandingPageBlockData
+      }
+      HeroImage
+      ArtistsLink {
+        Expanded {
+          Name
+          RelativePath
+        }
+      }
+      MainContentArea {
+        ContentLink {
+          Expanded {
+            ...ItemsInContentArea
+          }
+        }
+      }
+      FooterContentArea {
+        ContentLink {
+          Expanded {
+            ...ItemsInContentArea
+          }
+        }
+      }
+    }
+  }
+}
+    ${LandingPageBlockDataFragmentDoc}
+${ItemsInContentAreaFragmentDoc}`;
+
+/**
+ * __useLandingQuery__
+ *
+ * To run a query within a React component, call `useLandingQuery` and pass it any options that fit your needs.
+ * When your component renders, `useLandingQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useLandingQuery({
+ *   variables: {
+ *      locales: // value for 'locales'
+ *   },
+ * });
+ */
+export function useLandingQuery(baseOptions?: Apollo.QueryHookOptions<LandingQuery, LandingQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<LandingQuery, LandingQueryVariables>(LandingDocument, options);
+      }
+export function useLandingLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<LandingQuery, LandingQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<LandingQuery, LandingQueryVariables>(LandingDocument, options);
+        }
+export type LandingQueryHookResult = ReturnType<typeof useLandingQuery>;
+export type LandingLazyQueryHookResult = ReturnType<typeof useLandingLazyQuery>;
+export type LandingQueryResult = Apollo.QueryResult<LandingQuery, LandingQueryVariables>;

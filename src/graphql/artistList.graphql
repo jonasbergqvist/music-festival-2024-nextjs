@@ -1,5 +1,5 @@
 query ArtistList(
-  $locale: Locales = ALL,
+  $locale: band_Locales = ALL,
   $searchPhrase: String,
   $ranking: Ranking = RELEVANCE,
   $genres: [String!] = [],
