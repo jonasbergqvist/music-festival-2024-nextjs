@@ -13,23 +13,21 @@ query Landing(
                 ...LandingPageBlockData
             }
             HeroImage
-            ArtistsLink {
-                Expanded {
-                    Name
-                    RelativePath
-                }
-            }
             MainContentArea {
                 ContentLink {
                     Expanded {
-                        ...ItemsInContentArea
+                        __typename
+                        ...ContentBlock
+                        ...ImageFile
                     }
                 }
             }
             FooterContentArea {
                 ContentLink {
                     Expanded {
-                        ...ItemsInContentArea
+                        __typename
+                        ...ContentBlock
+                        ...ImageFile
                     }
                 }
             }

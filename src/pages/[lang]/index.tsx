@@ -1,9 +1,3 @@
-import { Artist, Ranking, StringFacet, useArtistListQuery } from './../generated';
-import { useEffect, useState } from 'react';
-
-import { Facets } from '@/components/Facets';
-import { Artists } from '@/components/Artists';
-import { Searchbox } from '@/components/Searchbox';
 
 export default function Home() {
 
