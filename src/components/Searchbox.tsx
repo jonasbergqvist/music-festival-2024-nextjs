@@ -38,7 +38,7 @@ export function Searchbox({ searchBox, ranking, setRanking, setGenres, setSearch
   };
 
   return (
-    <div className="relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center">
+    <div className="relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center"  style={{ background: "radial-gradient(141.61% 141.61% at 29.14% -11.49%, rgba(203, 213, 225, 0.15) 0%, rgba(203, 213, 225, 0) 57.72%)"}}>
       <div className="relative flex items-center w-full pl-1 lg:max-w-68 sm:pr-2 sm:ml-0">
           <div className="relative flex items-center w-full h-full lg:w-64 group">
               <input type="text" value={searchBox} onChange={handleSearchInput} onKeyDown={handleSearchboxKeyDown} className="block w-full py-1.5 pl-10 pr-4 leading-normal rounded-2xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 ring-opacity-90 bg-gray-100 dark:bg-gray-800 text-gray-400 aa-input" placeholder="Search"/>
@@ -50,12 +50,12 @@ export function Searchbox({ searchBox, ranking, setRanking, setGenres, setSearch
               </button>
           </div>
           <div className="flex items-center pl-4 rounded dark:border-gray-700">
-            <input id="bordered-radio-1" type="radio" checked={ranking === Ranking.Relevance} onChange={handleRankingSelection} value="RELEVANCE" name="bordered-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-            <label id="Relevance" className="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default</label>
+            <input id="bordered-radio-1" type="radio" checked={ranking === Ranking.Relevance} onChange={handleRankingSelection} value="RELEVANCE" name="bordered-radio" className="w-4 h-4 text-gray-300 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+            <label id="Relevance" className="w-full py-4 ml-2 text-sm font-medium text-gray-300 dark:text-gray-300">Default</label>
           </div>
           <div className="flex items-center pl-4 rounded dark:border-gray-700">
-            <input id="bordered-radio-2" type="radio" checked={ranking === Ranking.Semantic} onChange={handleRankingSelection} value="SEMANTIC" name="bordered-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-            <label id="Semantic" className="w-full py-4 ml-2 text-sm font-medium text-blue-500 dark:text-gray-300 underline">Semantic</label>
+            <input id="bordered-radio-2" type="radio" checked={ranking === Ranking.Semantic} onChange={handleRankingSelection} value="SEMANTIC" name="bordered-radio" className="w-4 h-4 text-gray-300 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+            <label id="Semantic" className="w-full py-4 ml-2 text-sm font-medium text-gray-300 dark:text-gray-300">Semantic</label>
           </div>
       </div>
     </div>

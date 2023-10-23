@@ -3,7 +3,7 @@ import NavLink from "./Layout/NavLink"
 import LayoutEffect from "./Layout/LayoutEffect"
 import { useLandingQuery } from "@/generated";
 import SectionWrapper from "./Layout/SectionWrapper";
-import parse from 'html-react-parser';
+import ContentBlock from "./ContentBlock";
 
 export default function LandingContent() {
     const { data } = useLandingQuery({ variables: {
@@ -22,11 +22,7 @@ export default function LandingContent() {
                     >
                         <div>
                             <div className="space-y-5 max-w-3xl mx-auto text-center">
-                                <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r font-extrabold mx-auto sm:text-6xl"
-                                    style={{
-                                        backgroundImage: "linear-gradient(179.1deg, #FFFFFF 0.77%, rgba(255, 255, 255, 0) 182.09%)"
-                                    }}
-                                >
+                                <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r font-extrabold mx-auto sm:text-6xl" style={{ backgroundImage: "linear-gradient(179.1deg, #FFFFFF 0.77%, rgba(255, 255, 255, 0) 182.09%)" }}>
                                     {data?.LandingPage?.items[0]?.Title }
                                 </h1>
                                 <p className="max-w-xl mx-auto text-gray-300">
@@ -57,42 +53,30 @@ export default function LandingContent() {
                             <ul className="space-y-8 gap-x-6 sm:flex sm:space-y-0">
                                 {
                                     data?.LandingPage?.items[0]?.MainContentArea?.map((item, idx) => {
-                                        const expanded = item?.ContentLink?.Expanded
-                                        if(expanded?.__typename === "ContentBlock") {
+                                        if(item?.ContentLink?.Expanded?.__typename === "ContentBlock") {
                                             return (
-                                                <li className="flex-1 flex flex-col justify-between border border-gray-800 rounded-2xl" key={idx}
-                                                style={{
-                                                    background: "radial-gradient(141.61% 141.61% at 29.14% -11.49%, rgba(203, 213, 225, 0.15) 0%, rgba(203, 213, 225, 0) 57.72%)"
-                                                }}
-                                                >
-                                                    <div className="p-8">
-                                                        <h3 className="text-gray-50 text-xl font-semibold">
-                                                            {expanded?.Title}
-                                                        </h3>
-                                                        <p className="mt-3 sm:text-sm md:text-base">
-                                                        { parse(expanded?.MainText ?? "") }
-                                                        </p>
-                                                    </div>
-                                                    <div className="pl-8">
-                                                        <img src={expanded?.Image ?? ""} alt={expanded?.ImageAlignment ?? ""} />
-                                                    </div>
+                                                <li className="flex-1 flex flex-col justify-between border border-gray-800 rounded-2xl" key={idx} style={{ background: "radial-gradient(141.61% 141.61% at 29.14% -11.49%, rgba(203, 213, 225, 0.15) 0%, rgba(203, 213, 225, 0) 57.72%)"}}>
+                                                    <ContentBlock content={item?.ContentLink?.Expanded} />
                                                 </li>
                                             )
-                                        } else if(expanded?.__typename === "ImageFile") {
+                                        }
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </SectionWrapper>
+                <SectionWrapper>
+                    <div className="custom-screen text-gray-300">
+
+                        <div className="mt-12">
+                            <ul className="space-y-8 gap-x-6 sm:flex sm:space-y-0">
+                                {
+                                    data?.LandingPage?.items[0]?.FooterContentArea?.map((item, idx) => {
+                                        if(item?.ContentLink?.Expanded?.__typename === "ContentBlock") {
                                             return (
-                                                <li className="flex-1 flex flex-col justify-between border border-gray-800 rounded-2xl" key={idx}
-                                                style={{
-                                                    background: "radial-gradient(141.61% 141.61% at 29.14% -11.49%, rgba(203, 213, 225, 0.15) 0%, rgba(203, 213, 225, 0) 57.72%)"
-                                                }}
-                                                >
-                                                    <div className="p-8">
-                                                        <p className="mt-3 sm:text-sm md:text-base">
-                                                        {expanded?.Content}
-                                                        </p>
-                                                    </div>
-                                                    <div className="pl-8">
-                                                        <img src={expanded?.Url ?? ""} />
-                                                    </div>
+                                                <li className="flex-1 flex flex-col justify-between border border-gray-800 rounded-2xl" key={idx} style={{ background: "radial-gradient(141.61% 141.61% at 29.14% -11.49%, rgba(203, 213, 225, 0.15) 0%, rgba(203, 213, 225, 0) 57.72%)"}}>
+                                                    <ContentBlock content={item?.ContentLink?.Expanded} />
                                                 </li>
                                             )
                                         }

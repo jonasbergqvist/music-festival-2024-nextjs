@@ -19,7 +19,11 @@
     "framer-motion": "^9.0.3",
     "graphql": "^16.8.1",
     "html-react-parser": "^4.2.5",
-    "next": "latest",
+    "jsonwebtoken": "^9.0.0",
+    "next": "13.2.3",
+    "next-applicationinsights": "^1.0.4",
+    "next-auth": "^4.22.1",
+    "oidc-client": "^1.11.5",
     "react": "latest",
     "react-dom": "latest"
   },

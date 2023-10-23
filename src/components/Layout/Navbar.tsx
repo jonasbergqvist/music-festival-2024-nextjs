@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import NavHeader from './NavHeader'
-import NavLink from './NavLink'
+import LoginButton from '../LoginBtn'
 
 const Navbar = () => {
 
@@ -9,10 +9,8 @@ const Navbar = () => {
     const menuBtnEl = useRef()
 
     const navigation = [
-        { name: "Features", href: "/#features" },
-        { name: "Pricing", href: "/#pricing" },
-        { name: "Testimonials", href: "/#testimonials" },
-        { name: "FAQs", href: "/#faqs" },
+        { name: "Home", href: "/en" },
+        { name: "Artists", href: "/en/artists" },
     ]
 
     useEffect(() => {
@@ -47,9 +45,7 @@ const Navbar = () => {
                             }
                         </ul>
                         <div className="gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-                            <Link href="/login" className="block hover:text-gray-50">
-                                Sign in
-                            </Link>
+                            <LoginButton/>
                         </div>
                     </div>
                 </div>

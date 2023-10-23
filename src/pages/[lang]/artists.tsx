@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { Facets } from '@/components/Facets';
 import { Artists } from '@/components/Artists';
 import { Searchbox } from '@/components/Searchbox';
+import LayoutEffect from '@/components/Layout/LayoutEffect';
+import GradientWrapper from '@/components/Layout/GradientWrapper';
 
 export default function Home() {
   const [searchBox, setSearchBox] = useState(() => '');
@@ -79,44 +81,50 @@ export default function Home() {
   }, [data?.Artist?.items]);
 
   return (
-    <main className="overflow-hidden bg-sky-500/50 dark:bg-gray-800 rounded-2xl">
-      <div className="flex">
-        <div className="relative hidden h-screen my-4 ml-4 shadow-lg lg:block w-80">
-            <div className="h-full bg-white rounded-2xl dark:bg-gray-700">
-                <div className="flex items-center justify-center pt-6 font-mono font-bold">
-                  Music Festival 2024
-                </div>
-                <nav className="mt-6">
-                    <div>
-                      <Facets 
-                        genreFacets={genreFacets} 
-                        genres={genres} 
-                        setGenres={setGenres}
-                        cityFacets={cityFacets} 
-                        cities={cities} 
-                        setCities={setCities}
-                         />
-                    </div>
-                </nav>
-            </div>
-        </div>
-        
-        <div className="w-full pl-0 md:p-4 md:space-y-4">
-            <header className="z-40 items-center w-full h-16 bg-white shadow-lg dark:bg-gray-700 rounded-2xl">
-              <Searchbox
-                searchBox={searchBox}
-                ranking={ranking}
-                setGenres={setGenres}
-                setRanking={setRanking}
-                setSearchBox={setSearchBox}
-                setSearchPhrase={setSearchPhrase} />
-            </header>
-            <main role="main" className="w-full h-full flex-grow p-3 overflow-auto">
-              <div className="tracking-widest text-xs title-font font-medium text-gray-800 mb-1">Hits: { data?.Artist?.total }</div>  
-              <Artists items={items}/>
-            </main>
+    <LayoutEffect className="duration-1000 delay-300"
+                        isInviewState={{
+                            trueState: "opacity-1",
+                            falseState: "opacity-0"
+                        }}
+                    >
+      <main className="overflow-hidden rounded-2xl">
+        <div className="flex">
+          <div className="relative hidden h-screen ml-4 shadow-lg lg:block w-80">
+              <div className="h-full rounded-2xl dark:bg-gray-700">
+                  
+                  <nav className="mt-6">
+                      <div>
+                        <Facets 
+                          genreFacets={genreFacets} 
+                          genres={genres} 
+                          setGenres={setGenres}
+                          cityFacets={cityFacets} 
+                          cities={cities} 
+                          setCities={setCities}
+                          />
+                      </div>
+                  </nav>
+              </div>
           </div>
-        </div>
-    </main>
+          
+          <div className="w-full pl-0 md:p-6">
+              <header className="z-40 items-center w-full h-16 shadow-lg dark:bg-gray-700 rounded-2xl">
+                <Searchbox
+                  searchBox={searchBox}
+                  ranking={ranking}
+                  setGenres={setGenres}
+                  setRanking={setRanking}
+                  setSearchBox={setSearchBox}
+                  setSearchPhrase={setSearchPhrase} />
+              </header>
+              <main role="main" className="w-full h-full flex-grow p-3 overflow-auto">
+                 <div className="tracking-widest text-xs title-font font-medium text-blue-300 mb-1">Hits: { data?.Artist?.total }</div>  
+                <Artists items={items}/>
+              </main>
+            </div>
+          </div>
+      </main>
+      
+    </LayoutEffect>
   );
 }

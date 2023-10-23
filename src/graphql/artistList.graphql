@@ -1,26 +1,14 @@
 query ArtistList(
-  $locale: band_Locales = ALL,
   $searchPhrase: String,
   $ranking: Ranking = RELEVANCE,
   $genres: [String!] = [],
   $cities: [String!] = []
 ) {
   Artist(
-    locale: [$locale]
     where: {
-      _or: [
-      {
-      	_fulltext: {
-        	match: $searchPhrase
-      	}
-      },
-      {
-        Genre: {
-          boost: 5
-          match: $searchPhrase
-        }
+      _fulltext: {
+        match: $searchPhrase
       }
-      ]
     }
     orderBy: {
       _ranking: $ranking
