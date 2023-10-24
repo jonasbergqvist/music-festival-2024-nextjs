@@ -7,6 +7,10 @@ type ContentAreaProps = {
 
 export default function ContentBlockFunc({ content } : ContentAreaProps) {
 
+function getImageUrl(): string {
+    return 'https://app-ocxcjonasbe57m7cprod.cms.optimizely.com/' + content.Image
+}
+
 return (
     <>
         <div className="p-8">
@@ -18,7 +22,7 @@ return (
             </p>
         </div>
         <div className="pl-8">
-            <img src={content.Image ?? ""} />
+            <img src={getImageUrl()} />
         </div>
     </>
 )

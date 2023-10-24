@@ -5,11 +5,14 @@ import { useLandingQuery } from "@/generated";
 import SectionWrapper from "./Layout/SectionWrapper";
 import ContentBlock from "./ContentBlock";
 
+function getImageUrl(relativePath: string): string {
+    return 'https://app-ocxcjonasbe57m7cprod.cms.optimizely.com/' + relativePath
+}
+
 export default function LandingContent() {
     const { data } = useLandingQuery({ variables: {
 
       }});
-
     if(data?.LandingContent?.items) {
         return (
             <section>
@@ -41,7 +44,7 @@ export default function LandingContent() {
                                 </div>
                             </div>
                             <GradientWrapper className="mt-16 sm:mt-28" wrapperClassName="max-w-3xl h-[250px] top-12 inset-0 sm:h-[300px] lg:h-[650px]">
-                                <img src={data?.LandingContent?.items[0]?.HeroImage ?? ""} />
+                                <img src={getImageUrl(data?.LandingContent?.items[0]?.HeroImage ?? "")} />
                             </GradientWrapper>
                         </div>
                     </LayoutEffect>
