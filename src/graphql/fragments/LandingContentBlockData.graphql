@@ -1,0 +1,4 @@
+fragment LandingContentBlockData on LandingContentBlockData {
+    Heading
+    Message
+}

@@ -1,7 +1,7 @@
 query Landing(
     $locales: Locales = ALL
 ) {
-    LandingPage(
+    LandingContent(
         locale: [$locales]
         orderBy: {Saved: DESC},
         limit: 1
@@ -10,7 +10,7 @@ query Landing(
             Title
             Subtitle
             BuyTicketBlock {
-                ...LandingPageBlockData
+                ...LandingContentBlockData
             }
             HeroImage
             MainContentArea {
@@ -18,7 +18,6 @@ query Landing(
                     Expanded {
                         __typename
                         ...ContentBlock
-                        ...ImageFile
                     }
                 }
             }
@@ -27,7 +26,6 @@ query Landing(
                     Expanded {
                         __typename
                         ...ContentBlock
-                        ...ImageFile
                     }
                 }
             }

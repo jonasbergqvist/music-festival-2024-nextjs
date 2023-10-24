@@ -1,6 +1,5 @@
 fragment ContentBlock on ContentBlock {
     Title
     Image
-    ImageAlignment
     MainText
 }

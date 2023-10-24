@@ -10,7 +10,7 @@ import { useState } from 'react'
 import { ExtendedSession } from '@/components/LoginBtn';
 
 const httpLink = createHttpLink({
-  uri: 'https://cg.optimizely.com/content/v2?auth=PIaHauQNtPUD5OvgYQ5UxvJ4rOfjyylqfGJc2aCpSiTNGFjl',
+  uri: 'https://cg.optimizely.com/content/v2?auth=NsfqFlN2UN1srJEEJyBGobakhagSIbmpSZBhyseRJHuaqoJ2',
 });
 
 function getPreviewToken(): string{
