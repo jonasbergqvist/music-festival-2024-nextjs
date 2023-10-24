@@ -1,5 +1,5 @@
 query ArtistDetails(
-  $locale: Locales = ALL,
+  $locale: band_Locales = ALL,
   $artistName: String!
 ) {
   Artist(

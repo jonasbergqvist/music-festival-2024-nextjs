@@ -1,4 +1,4 @@
-schema: https://dev.cg.optimizely.com/content/v2?auth=thqghUxNlZKQ1gOaiWXP2WNoRylaFekGuJ3niZcEhDoztTJs
+schema: https://cg.optimizely.com/content/v2?auth=PIaHauQNtPUD5OvgYQ5UxvJ4rOfjyylqfGJc2aCpSiTNGFjl
 documents: './src/graphql/**/*.graphql'
 generates:
   ./src/generated.ts:
@@ -9,4 +9,4 @@ generates:
     config:
       withHooks: true
       fetcher:
-        endpoint: 'https://dev.cg.optimizely.com/content/v2?auth=thqghUxNlZKQ1gOaiWXP2WNoRylaFekGuJ3niZcEhDoztTJs'
+        endpoint: 'https://cg.optimizely.com/content/v2?auth=PIaHauQNtPUD5OvgYQ5UxvJ4rOfjyylqfGJc2aCpSiTNGFjl'

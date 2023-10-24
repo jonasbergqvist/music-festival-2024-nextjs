@@ -1,0 +1,36 @@
+query Landing(
+    $locales: Locales = ALL
+) {
+    LandingPage(
+        locale: [$locales]
+        orderBy: {Saved: DESC},
+        limit: 1
+    ) {
+        items {
+            Title
+            Subtitle
+            BuyTicketBlock {
+                ...LandingPageBlockData
+            }
+            HeroImage
+            MainContentArea {
+                ContentLink {
+                    Expanded {
+                        __typename
+                        ...ContentBlock
+                        ...ImageFile
+                    }
+                }
+            }
+            FooterContentArea {
+                ContentLink {
+                    Expanded {
+                        __typename
+                        ...ContentBlock
+                        ...ImageFile
+                    }
+                }
+            }
+        }
+    }
+}
