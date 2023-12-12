@@ -72,7 +72,7 @@ function Auth({ children }:any) {
         headers: {
           ...headers,
           preview_token: preview_token,
-          //Authorization: 'Bearer ' + extendedSession.token.access_token
+          Authorization: 'Bearer ' + extendedSession.token.access_token
         }
       }
     });
