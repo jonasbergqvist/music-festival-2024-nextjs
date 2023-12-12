@@ -2,15 +2,14 @@ import '@/styles/globals.css'
 import { Layout } from '@/components/Layout/Layout';
 
 import type { AppProps } from 'next/app';
-import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloClient, ApolloLink, InMemoryCache, createHttpLink } from '@apollo/client';
 import { ApolloProvider } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { SessionProvider, useSession } from "next-auth/react"
-import { useState } from 'react'
 import { ExtendedSession } from '@/components/LoginBtn';
 
 const httpLink = createHttpLink({
-  uri: 'https://cg.optimizely.com/content/v2?auth=NsfqFlN2UN1srJEEJyBGobakhagSIbmpSZBhyseRJHuaqoJ2',
+  uri: 'https://cg.optimizely.com/content/v2?auth=NsfqFlN2UN1srJEEJyBGobakhagSIbmpSZBhyseRJHuaqoJ2&tenant_id=299a9bb409ef4b0ba10f15e824d8f1f4',
 });
 
 function getPreviewToken(): string{
@@ -23,29 +22,14 @@ function getPreviewToken(): string{
   return urlParams.get('preview_token')?.toString() ?? ""
 }
 
-let authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
-  const preview_token = getPreviewToken();
-  // return the headers to the context so httpLink can read them
-  return {
-    headers: {
-      ...headers,
-      preview_token: preview_token
-    }
-  }
-});
+let authLink: ApolloLink;
 
 let client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: httpLink,
   cache: new InMemoryCache(),
 });
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-  
-  if(session) {
-    
-  }
-
   return (
     <SessionProvider session={session}>
       <Auth>

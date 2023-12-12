@@ -1,7 +1,6 @@
 import NextAuth, { Session } from "next-auth"
 import OptiOidcProvider from "./OptiOidcProvider"
 import { JWT } from "next-auth/jwt";
-import { useState } from "react";
 
 export const authOptions: any = {
   providers: [
@@ -18,7 +17,10 @@ export const authOptions: any = {
   callbacks: {
     async jwt({token, account}: any){
         if (account) {
-          const accessTokenParsed = JSON.parse(Buffer.from(account.access_token.split('.')[1], 'base64').toString());
+          const firstSplit = account.access_token.split('.')[1]
+          const buffer = Buffer.from(firstSplit, 'base64')
+          const accessTokenParsed = buffer.toJSON()
+
           token.user = accessTokenParsed
           token.access_token = account.access_token
         }
