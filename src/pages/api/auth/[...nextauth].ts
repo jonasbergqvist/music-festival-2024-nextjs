@@ -1,6 +1,6 @@
 import NextAuth, { Session } from "next-auth"
 import OptiOidcProvider from "./OptiOidcProvider"
-import { JWT } from "next-auth/jwt";
+import {refreshAccessToken} from "@/util/oauth";
 
 export const authOptions: any = {
   providers: [
@@ -8,28 +8,30 @@ export const authOptions: any = {
       clientId: `${process.env.NEXT_PUBLIC_LOGIN_CLIENT_ID}`,
       authorization: { params: { scope: "openid profile offline_access email roles epi_content_delivery" } },
       clientSecret: '',
-      checks: ['pkce', 'state', 'nonce'],
-      client: {
-        token_endpoint_auth_method: 'none'
-      },
+      checks: ['pkce', 'state', 'nonce']
     }),
   ],
   callbacks: {
-    async jwt({token, account}: any){
-        if (account) {
-          const firstSplit = account.access_token.split('.')[1]
-          const buffer = Buffer.from(firstSplit, 'base64')
-          const accessTokenParsed = buffer.toJSON()
-
-          token.user = accessTokenParsed
-          token.access_token = account.access_token
+    async jwt({token, user, account}: any){
+      if (account) {
+        return {
+          accessToken: account.access_token,
+          accessTokenExpires: account.expires_at * 1000,
+          user,
+          refreshToken: account.refresh_token,
+          provider: account.provider,
         }
-        return token
-    },
-    async session(session: Session, token: JWT){
-        session = {...token, ...session}
-        return session
       }
+
+      if (Date.now() < token.accessTokenExpires) {
+        return token
+      }
+
+      return await refreshAccessToken(token)
+  },
+  async session(session: Session){
+      return session
+  }
   }
 }
 
